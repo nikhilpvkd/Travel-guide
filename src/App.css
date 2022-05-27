@@ -1,38 +1,305 @@
-.App {
-  text-align: center;
+* {
+	padding: 0;
+	margin: 0;
+	appearance: none;
+	text-decoration: none;
+	color: #222;
+	box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::-webkit-scrollbar {
+	display: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul,
+ol {
+	list-style: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
 }
-
-.App-link {
-  color: #61dafb;
+header {
+	width: 90%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0;
 }
+header div.logo {
+	width: 170px;
+	cursor: pointer;
+}
+header div.logo img {
+	width: 100%;
+	display: block;
+}
+header div.button {
+	height: 40px;
+	width: 120px;
+	background: blue;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+	border-radius: 5px;
+}
+header div.button a {
+	color: #fff;
+	font-weight: 600;
+	font-size: 16px;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.home h2 {
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+.home p {
+	color: grey;
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+.home ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.home ul li {
+	width: 23%;
+	margin-bottom: 20px;
+}
+.home ul li div.image {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.home ul li div.image img {
+	width: 100%;
+	display: block;
+	border-radius: 5px;
+}
+.home ul li span.name {
+	display: block;
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 6px;
+}
+.home ul li span.location {
+	font-size: 18px;
+}
+.home ul li span.location img {
+	width: 15px;
+	display: inline-block;
+	margin-right: 10px;
+}
+.view {
+	width: 80%;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+.view h2 {
+	font-size: 34px;
+	margin-bottom: 20px;
+}
+.view span.category {
+	border: 1px solid grey;
+	display: inline-block;
+	padding: 10px 15px;
+	border-radius: 24px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+}
+.view span.location {
+	color: grey;
+	font-size: 16px;
+}
+.view span.location img {
+	margin-right: 10px;
+}
+.view div.images {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-bottom: 30px;
+}
+.view div.images div.left {
+	width: 48%;
+}
+.view div.images div.left img {
+	width: 100%;
+	display: block;
+	border-radius: 15px 0 0 0;
+}
+.view div.images ul.right {
+	width: 48%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.view div.images ul.right li {
+	width: 48%;
+}
+.view div.images ul.right li img {
+	width: 100%;
+	display: block;
+}
+.view div.details {
+}
+.view div.details h4 {
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.view div.details p {
+	font-size: 15px;
+	line-height: 1.6em;
+}
+.view div.images ul.right li:nth-child(2) img {
+	border-radius: 0 15px 0 0;
+}
+.login {
+	display: flex;
+}
+.login section.left {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.login section.left h2 {
+	font-size: 48px;
+	color: #121e59;
+	width: 70%;
+}
+.login section.right {
+	width: 50%;
+	padding: 10px;
+}
+.login section.right div.container {
+	border-radius: 5px;
+	background: #efedef;
+	padding: 200px 15px 100px 30px;
+}
+.login section.right h3 {
+	font-size: 34px;
+	margin-bottom: 15px;
+}
+.login section.right span.small {
+	font-size: 18px;
+	color: grey;
+	margin-bottom: 15px;
+	display: block;
+}
+.login section.right form {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.login section.right form input[type="email"] {
+	width: 100%;
+	border: 1px;
+	padding: 10px 0 10px 10px;
+	border-radius: 8px;
+}
+.login section.right form span.signButton {
+	font-size: 14px;
+	color: blue;
+	display: inline-block;
+	margin-left: 295px;
+	cursor: pointer;
+}
+.login section.right form input[type="password"] {
+	width: 100%;
+	border: 1px;
+	padding: 10px 0 10px 10px;
+	border-radius: 8px;
+}
+.login section.right form input[type="submit"] {
+	width: 100px;
+	padding: 12px 0;
+	color: #fff;
+	font-weight: 600;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: none;
+	background: #121e59;
+	cursor: pointer;
+}
+.signin {
+	display: flex;
+}
+.signin section.left {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.signin section.left h2 {
+	font-size: 48px;
+	color: #121e59;
+	width: 70%;
+}
+.signin section.right {
+	width: 50%;
+	padding: 10px;
+}
+.signin section.right div.container {
+	border-radius: 5px;
+	background: #efedef;
+	padding: 200px 15px 100px 30px;
+}
+.signin section.right h3 {
+	font-size: 34px;
+	margin-bottom: 15px;
+}
+.signin section.right span.small {
+	font-size: 18px;
+	color: grey;
+	margin-bottom: 15px;
+	display: block;
+}
+.signin section.right form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 60%;
+}
+.signin section.right form input[type="email"] {
+	width: 100%;
+	border: 1px;
+	padding: 10px 0 10px 10px;
+	border-radius: 8px;
+}
+.signin section.right form span.signButton {
+	font-size: 14px;
+	color: blue;
+	display: inline-block;
+	margin-left: 295px;
+	cursor: pointer;
+}
+.signin section.right form input[type="password"] {
+	width: 100%;
+	border: 1px;
+	padding: 10px 0 10px 10px;
+	border-radius: 8px;
+}
+.signin section.right form input[type="text"] {
+	width: 100%;
+	border: 1px;
+	padding: 10px 0 10px 10px;
+	border-radius: 8px;
+}
+.signin section.right form input[type="submit"] {
+	width: 100px;
+	padding: 12px 0;
+	color: #fff;
+	font-weight: 600;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: none;
+	background: #121e59;
+	cursor: pointer;
+}
+form p {
+	color: red;
+	font-size: 12px;
 }
